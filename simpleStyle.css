@@ -1,0 +1,232 @@
+/*
+ * Main style sheet
+ */
+
+body {
+	margin:0;
+	padding:0;
+	background-size:cover;
+	background: #ccddff;
+}
+
+h1 {
+	margin:0;
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	background-image: linear-gradient(88deg, #80aaff 5%, #99bbff 30%, #b3ccff 67%, #ccddff 87%);
+	font-family: Helvetica;
+	font-size: 26px;
+	color: #585758;
+	letter-spacing: 2px;
+	font-weight: bold;
+	box-shadow: 0px 2px 3px #888888;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+button {
+	position: absolute;
+	top:540px;
+	width: 90px;
+	border-radius: 12px;
+	outline:none;
+	font-size: 32;
+	font-family: Helvetica;
+	font-weight:bold;
+	color: #585758;
+}
+
+button.simplify {
+	left: 10px;
+}
+
+button.statistics {
+	left: 105px;
+}
+
+button.clear {
+	left: 200px;
+}
+
+button.disabled {
+	background-color: #d9d9d9;
+	border-top-color: #d7d7d7;
+	border-bottom-color: #e6e6e6;
+	color: #808080;
+}
+
+/*
+ * === Style for Statistics box === 
+ */ 
+
+.statsBox {
+	float:left;
+	padding-top:5px;
+	padding-left: 5px;
+	height: 395px;
+	margin: 10px;
+	margin-left: 0px;
+	width: 195px;
+	background-color: #99bbff;
+	box-shadow: 3px 3px 3px #888888; 
+	outline: none;
+}
+
+div span.title {
+	font-family: Helvetica;
+	color: #585758;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+div p {
+	font-family: Helvetica;
+	color: #585758;
+	text-align: left;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+}
+div p span {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div p span.result {
+	font-weight: bold;
+}
+
+div p.heading {
+	font-size: 13px;
+	text-decoration: underline
+}
+
+/*
+ * === Style for Sentence box === 
+ */ 
+ 
+#infoBox{
+	float:left;
+	padding-top:5px;
+	padding-left: 5px;
+	height: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: calc(100% - 25px);
+	background-color: #99bbff;
+	box-shadow: 3px 3px 3px #888888; 
+	outline: none;
+}
+
+div p.instructions {
+	font-size: 12px;
+	margin: 0px;
+}
+
+div p.example {
+	margin: 3px;
+}
+
+exampleHighlight {
+	color: red;
+}
+
+/*
+ * === Style for CodeMirror === 
+ */ 
+
+.CodeMirror {
+	float:left;
+	margin: 10px;
+	resize: none;
+	width: calc(100% - 230px);
+	box-shadow: 3px 3px 3px #888888; 
+	outline: none;
+	color:#585758;
+}
+
+/* Style for placeholder text */
+.CodeMirror pre.CodeMirror-placeholder {
+	color: #999;
+}
+
+/* Style for complex words */
+.cm-complexStyle {
+	text-decoration: underline;
+	color: #1E90FF;
+	cursor: pointer;
+}
+
+/* Style for complex sentences */
+.cm-complexSentenceStyle {
+	text-decoration: underline;
+	font-style: italic;
+	cursor: pointer;
+}
+
+/*
+ * === Style for dropdown menus ===
+ */
+
+.dropdown {
+	position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+
+/* Dropdown content */
+.dropdown-content {
+	position: absolute;
+	word-wrap: break-word;
+    background-color: white;
+    box-shadow: 0px 2px 8px 0px #b3b3b3;
+    min-width: 80px;
+    z-index: 100;
+}
+
+/* Items inside dropdown */
+.dropdown-content wordnet {
+    display: block;
+    padding: 6px 8px;
+    color: blue;
+    cursor: pointer;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+.dropdown-content umls {
+    display: block;
+    padding: 6px 8px;
+    color: green;
+    cursor: pointer;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+.dropdown-content negation {
+    display: block;
+    padding: 6px 8px;
+    color: purple;
+    cursor: pointer;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+.dropdown-content generic {
+    display: block;
+    padding: 6px 8px;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+/* On hover, change color of dropdown items */
+.dropdown-content wordnet:hover {background-color: #f0f0f0}
+.dropdown-content umls:hover {background-color: #f0f0f0}
+.dropdown-content generic:hover {background-color: #f0f0f0}
+

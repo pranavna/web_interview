@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title> Medical Text Simplification Tool</title>
+    <!-- main style sheet -->
+    <link rel="stylesheet" type="text/css" href="simpleStyle.css" />
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/addon/mode/overlay.js"></script -->
+    <script src="codemirror/addon/display/placeholder.js"></script>
+    <script src="codemirror/addon/hint/show-hint.js"></script>
+    
+    <!--  commented to use local copies
+    <script src="http://codemirror.net/addon/mode/overlay.js"></script>
+    <script src="http://codemirror.net/addon/display/placeholder.js"></script>
+    <script src="https://codemirror.net/addon/hint/show-hint.js"></script>
+	-->
+
+    <!-- Custom CodeMirror Highlighting Mode -->
+	<script src="simplifyAllMode.js"></script>
+    <!--  No need to load these since they're encapsulated in simplifyAllMode 
+	<script src="simplifyMode.js"></script>
+    <script src="simplifySentenceMode.js"></script>    
+    -->
+  </head>
+  <body>
+    <H1>Medical Text Simplification Tool</H1>
+
+    <!-- Simplify, Clear, and Get Statistics buttons -->
+    <div class = "buttons">
+      <button id="simplifyBtn" class = "simplify">Simplify</button>
+      <button id="clearBtn" class="clear">Clear</button>
+      <button id="statsBtn" class="disabled statistics" disabled>Get Stats</button>
+    </div>
+
+    <!-- Statistics Box -->
+    <div class="boxes">
+      <div class="box statsBox">
+        <!--  <span class=title>Statistics</span> -->
+        <p class="heading">Original Text</p>
+        <p class="category">Word Count:
+          <span class="original-wc"></span>
+        </p>
+        <p class="category">Average Word Frequency:
+          <span class="original-wf"></span>
+        </p>
+        <br>
+        <p class="heading">Revised Text</p>
+        <p class="category">Word Count:
+          <span class="revised-wc"></span>
+        </p>
+        <p class = "category">Average Word Frequency:
+          <span class="revised-wf"></span>
+        </p>
+        <br>
+        <p class ="heading">Results
+          <br>
+          <span class="pre-result"></span>
+          <span class="result"></span>
+          <span class="post-result"></span>
+        </p>
+        <!-- <p><span class=title>Synonym Information</span> -->
+        <p style="color:Blue">
+			<input type="checkbox" id="wordnetCheck" checked />
+			Wordnet (blue)</p>
+        <p style="color:Green">
+        		<input type="checkbox" id="UMLSCheck" checked />
+        		UMLS (green)</p>
+        </p>
+        <p style="color:Purple">
+        		<input type="checkbox" id="negationCheck" checked />
+        		Negation (purple)</p>
+        </p>
+        <p>
+        		<input type="checkbox" id="affixCheck" checked />
+        		Affixes</p>
+        </p>
+      </div>
+    </div>
+    
+    <div id="infoBox">
+    </div>
+
+     <!-- Main script -->
+    <script src="script.js"></script>
+  </body>
+</html>
