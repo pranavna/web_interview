@@ -300,7 +300,7 @@ function clear() {
 }
 
 function writeInfoBox() {
-	document.getElementById("infoBox").innerHTML = "Test Button Clicked";
+	document.getElementById("infoBox").innerHTML = "<span class='format'>Test Button Clicked</span>";;
 }
 
 /**

@@ -229,6 +229,13 @@ exampleHighlight {
     white-space: nowrap;
 }
 
+.format {
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* On hover, change color of dropdown items */
 .dropdown-content wordnet:hover {background-color: #f0f0f0}
 .dropdown-content umls:hover {background-color: #f0f0f0}
