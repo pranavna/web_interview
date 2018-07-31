@@ -49,6 +49,10 @@ button.clear {
 	left: 200px;
 }
 
+button.test {
+	left: 295px;
+}
+
 button.disabled {
 	background-color: #d9d9d9;
 	border-top-color: #d7d7d7;

@@ -299,6 +299,10 @@ function clear() {
 	reset();
 }
 
+function writeInfoBox() {
+	document.getElementById("infoBox").innerHTML = "Test Button Clicked";
+}
+
 /**
  * Gets input text from the text box 
  */
@@ -364,6 +368,9 @@ function getStatistics(textIdentifier, input) {
  */
 function addListeners() {
 	// call clear when clear button is clicked
+	document.getElementById("TestBtn").addEventListener("click", function(e){
+		writeInfoBox();
+	});// call clear when clear button is clicked
 	document.getElementById("clearBtn").addEventListener("click", function(e){
 		clear();
 	});
