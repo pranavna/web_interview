@@ -1,3 +1,3 @@
-# web_interview
+# web_interview :smile_cat:
 
-:star:
+:star: This is an assignment for the RA position for "Simplification tool - web interface job"
